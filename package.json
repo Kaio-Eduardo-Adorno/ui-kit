@@ -32,9 +32,8 @@
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "deploy-storybook": "storybook-to-ghpages --existing-output-dir=storybook-static --ci",
-    "deploy-storybook-manual": "npm run build-storybook && sed -i s=/assets/=/lina-essentials/assets/=g 'storybook-static/iframe.html' && npm run deploy-storybook",
+    "build-storybook": "storybook build -s public",
+    "serve-storybook": "serve storybook-static",
     "commit": "git-cz"
   },
   "dependencies": {
